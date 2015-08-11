@@ -16,7 +16,7 @@ class Postmark extends Adapter
     
     email =
       "From": @fromEmail
-      "To": to
+      "To": envelope.user.id
       "Subject": message.subject
       "TextBody": message
       
