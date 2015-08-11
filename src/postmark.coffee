@@ -34,13 +34,14 @@ class Postmark extends Adapter
 
   run: ->
     @robot.router.post "/hubot/email", (req, res) =>
+      console.log req.body
       res.status 200
       res.send()
       
-      user = @userForId res.data.From, name: res.data.FromName
+      user = @userForId req.body.From, name: req.body.FromName
         
-      message = new TextMessage user, res.data.TextBody, res.data.MessageID
-      message.subject = res.data.Subject
+      message = new TextMessage user, req.body.TextBody, req.body.MessageID
+      message.subject = req.body.Subject
 
       @receive message
       
