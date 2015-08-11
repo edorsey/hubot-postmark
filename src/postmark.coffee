@@ -42,7 +42,8 @@ class Postmark extends Adapter
         
       message = new TextMessage user, req.body.TextBody, req.body.MessageID
       message.subject = req.body.Subject
-
+      
+      console.log message
       @receive message
       
     @emit "connected"
