@@ -1,0 +1,28 @@
+{
+  "name": "hubot-postmark",
+  "version": "1.0.0",
+  "description": "Postmark adapter for hubot",
+  "main": "./src/postmark.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/edorsey/hubot-postmark"
+  },
+  "author": "Eric Dorsey (eric@ericdorsey.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edorsey/hubot-postmark/issues"
+  },
+  "homepage": "https://github.com/edorsey/hubot-postmark",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "coffee-script": "^1.9.3",
+    "hubot": "^2.13.2",
+    "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "postmark": "^1.2.1"
+  }
+}
