@@ -17,11 +17,11 @@ class Postmark extends Adapter
     email =
       "From": @fromEmail
       "To": envelope.user.id
-      "Subject": message.subject
+      "Subject": envelope.message.subject
       "TextBody": message
       
     @client.sendEmail email, (err, success) ->
-      if err or not body?
+      if err
         console.log "Error sending reply SMS: #{err}"
       else
         console.log "Sending reply SMS: #{message} to #{user.id}"
