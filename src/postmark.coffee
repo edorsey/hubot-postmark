@@ -39,10 +39,9 @@ class Postmark extends Adapter
       
       user = @userForId req.body.From, name: req.body.FromName
         
-      message = new TextMessage user, req.body.TextBody, req.body.MessageID
+      message = new TextMessage user, "@#{@robot.name} #{req.body.TextBody}", req.body.MessageID
       message.subject = req.body.Subject
       
-      console.log "MESSAGE", message
       @receive message
       
     @emit "connected"
